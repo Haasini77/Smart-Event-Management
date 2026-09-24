@@ -1,0 +1,155 @@
+.my-events-page {
+  min-height: 100vh;
+  padding: 50px 7%;
+  background: #f5f7fb;
+  color: #172033;
+  box-sizing: border-box;
+}
+
+.my-events-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.my-events-header h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 800;
+  color: #172033;
+}
+
+.my-events-subtitle {
+  margin-top: 8px;
+  color: #64748b;
+  font-size: 17px;
+}
+
+.back-button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  background: #172033;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background: #33415c;
+}
+
+.my-events-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.my-event-card {
+  background: white;
+  border: 1px solid #e2e7ef;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 8px 25px rgba(23, 32, 51, 0.07);
+  transition: 0.25s ease;
+}
+
+.my-event-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(23, 32, 51, 0.12);
+}
+
+.my-event-category {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: #e8efff;
+  color: #4169c1;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.my-event-card h2 {
+  margin: 0 0 14px;
+  font-size: 24px;
+  color: #172033;
+}
+
+.my-event-description {
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.my-event-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.my-event-detail {
+  font-size: 15px;
+  color: #475569;
+}
+
+.my-event-detail strong {
+  color: #172033;
+}
+
+.cancel-button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 13px;
+  border: 1px solid #d9534f;
+  border-radius: 10px;
+  background: white;
+  color: #d9534f;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cancel-button:hover {
+  background: #d9534f;
+  color: white;
+}
+
+.no-events {
+  text-align: center;
+  background: white;
+  padding: 50px;
+  border-radius: 18px;
+}
+
+@media (max-width: 1000px) {
+  .my-events-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .my-events-page {
+    padding: 30px 20px;
+  }
+
+  .my-events-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .my-events-header h1 {
+    font-size: 38px;
+  }
+
+  .back-button {
+    width: 100%;
+  }
+
+  .my-events-container {
+    grid-template-columns: 1fr;
+  }
+}
