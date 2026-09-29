@@ -278,28 +278,28 @@ function Dashboard() {
 
             {/* Create Event */}
 
-            <Link
-              to="/admin/events"
-              className="quick-action"
-            >
+            {/* Create Event - Admin Only */}
 
-              <span>
-                ➕
-              </span>
+{user.role === "admin" && (
+  <Link
+    to="/admin/events"
+    className="quick-action"
+  >
+    <span>
+      ➕
+    </span>
 
-              <div>
+    <div>
+      <strong>
+        Create Event
+      </strong>
 
-                <strong>
-                  Create Event
-                </strong>
-
-                <small>
-                  Add a new event
-                </small>
-
-              </div>
-
-            </Link>
+      <small>
+        Add a new event
+      </small>
+    </div>
+  </Link>
+)}
 
           </div>
 
